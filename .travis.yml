@@ -1,0 +1,30 @@
+sudo: false
+language: php
+php:
+  - 5.5
+  - 5.6
+  - 7.0
+  - hhvm
+services:
+  - elasticsearch
+matrix:
+  allow_failures:
+    - php: hhvm
+before_script:
+  - composer config -g github-oauth.github.com $GITHUB_COMPOSER_AUTH
+  - composer install --no-interaction
+script:
+  - vendor/bin/phpunit --coverage-clover=coverage.clover
+  - vendor/bin/phpcs -p --standard=vendor/ongr/ongr-strict-standard/Ongr --ignore=vendor/,Tests/app/ ./
+after_script:
+  - wget https://scrutinizer-ci.com/ocular.phar
+  - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
+notifications:
+  webhooks:
+    urls:
+      - https://webhooks.gitter.im/e/81e47479feba5ba8dc47
+    on_success: change
+    on_start: never
+env:
+  global:
+    secure: TEmbW6Syl8uL7lzdOAScy0gPv0p7fDy9D2qzgsKTCS36q/KIeuHOPlEsFIJd5MLbI3UM7TAzCn6HvO8OR7sx6qNO2TVWnwQ/6sNkI0f4+1ADu31QMJI9oItDfVxuiZjcHXETVCskdPVllYGhVSaaePfps6jVKYge89+976m4OfU=
