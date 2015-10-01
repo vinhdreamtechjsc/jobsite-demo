@@ -15,7 +15,7 @@ script:
   - phpunit -c app/phpunit.xml.dist
 
 after_script:
- - php vendor/bin/coveralls -v
+ - php scripts/coveralls -v --exclude-no-stmt
 
 matrix:
   allow_failures:
