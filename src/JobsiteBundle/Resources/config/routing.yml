@@ -1,3 +1,11 @@
 jobsite_homepage:
     path:     /
     defaults: { _controller: JobsiteBundle:Default:index }
+
+jobsite_import:
+    path:     /import
+    defaults: { _controller: JobsiteBundle:Default:import }
+
+jobsite_search:
+    path:     /search
+    defaults: { _controller: JobsiteBundle:Default:search }
