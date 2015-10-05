@@ -82,11 +82,14 @@ swiftmailer:
 ongr_elasticsearch:
     connections:
         default:
-            hosts: { 127.0.0.1:9200 }
+            hosts:
+              - 127.0.0.1:9200
             index_name: jobsite
             settings:
-                refresh_interval: -1
-                number_of_replicas: 1
+              number_of_shards: 2
+              number_of_replicas: 0
+              index:
+                  refresh_interval: -1
     managers:
         default:
             connection: default
