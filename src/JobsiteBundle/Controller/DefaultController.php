@@ -4,6 +4,7 @@ namespace JobsiteBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use ONGR\ElasticsearchDSL\Query;
+use ONGR\ElasticsearchDSL\Filter;
 use JobsiteBundle\Document\JobDocument;
 use GuzzleHttp\Client;
 
@@ -72,14 +73,19 @@ class DefaultController extends Controller
 
         $search = $repository->createSearch();
         $search->setSize(50);
-        $queryStringQuery = new Query\QueryStringQuery("php developer", ["default_field"=>"position"]);
+        $hasChild = new Filter\HasChildFilter('careerlevel', new Filter\TermFilter('type', 'foo'));
+        $search->addFilter($hasChild);
+        $queryStringQuery = new Query\QueryStringQuery("php", ["default_field"=>"position"]);
 
         $search->addQuery($queryStringQuery);
 
+
+        var_dump($search->toArray());
+
         $results = $repository->execute($search);
-echo $results->count();
+        echo $results->count();
         echo "<pre>";
-       var_dump($search->toArray());die;
+
         foreach ($results as $job)
         {
             echo ($job->position." (".$job->company.")<br />");
