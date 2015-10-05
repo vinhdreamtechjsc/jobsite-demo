@@ -1,4 +1,4 @@
-Jobsite Demo using Symfony 2 and ElasticSearch Bundle from ONGR
+Jobsite Demo using Symfony 2 and ElasticSearch Bundle from http://www.ongr.io
 ===
 
 [![Build Status](https://travis-ci.org/vinhdreamtechjsc/jobsite-demo.svg?branch=master)](https://travis-ci.org/vinhdreamtechjsc/jobsite-demo)

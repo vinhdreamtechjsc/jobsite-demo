@@ -1,3 +1,3 @@
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
+jobsite:
+    resource: "@JobsiteBundle/Resources/config/routing.yml"
+    prefix:   /

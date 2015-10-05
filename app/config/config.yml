@@ -78,3 +78,17 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+ongr_elasticsearch:
+    connections:
+        default:
+            hosts: { 127.0.0.1:9200 }
+            index_name: jobsite
+            settings:
+                refresh_interval: -1
+                number_of_replicas: 1
+    managers:
+        default:
+            connection: default
+            mappings:
+                - JobsiteBundle

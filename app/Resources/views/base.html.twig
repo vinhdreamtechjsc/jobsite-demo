@@ -1,13 +1,41 @@
 <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}JobsiteDemo | developed by VinhNT{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="company is a free job board template">
+    <meta name="author" content="VinhNT">
+    <meta name="keyword" content="html, css, bootstrap, job-board">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="{{  asset('bundles/jobsite/css/normalize.css') }}">
+    <link rel="stylesheet" href="{{  asset('bundles/jobsite/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{  asset('bundles/jobsite/css/fontello.css') }}">
+    <link rel="stylesheet" href="{{  asset('bundles/jobsite/css/animate.css') }}">
+    <link rel="stylesheet" href="{{  asset('bundles/jobsite/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{  asset('bundles/jobsite/css/owl.carousel.css') }}">
+    <link rel="stylesheet" href="{{  asset('bundles/jobsite/css/owl.theme.css') }}">
+    <link rel="stylesheet" href="{{  asset('bundles/jobsite/css/owl.transitions.css') }}">
+    <link rel="stylesheet" href="{{  asset('bundles/jobsite/style.css') }}">
+    <link rel="stylesheet" href="{{  asset('bundles/jobsite/responsive.css') }}">
+    <script src="{{  asset('bundles/jobsite/js/vendor/modernizr-2.6.2.min.js') }}"></script>
+    {% block stylesheets %}{% endblock %}
+
+</head>
+<body>
+{% block body %}{% endblock %}
+{% block javascripts %}{% endblock %}
+</body>
 </html>

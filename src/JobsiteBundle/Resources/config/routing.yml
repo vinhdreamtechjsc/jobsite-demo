@@ -1,0 +1,3 @@
+jobsite_homepage:
+    path:     /
+    defaults: { _controller: JobsiteBundle:Default:index }

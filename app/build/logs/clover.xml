@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1443695865">
+  <project timestamp="1443695865">
+    <package name="JobsiteBundle\Controller">
+      <file name="/Users/vinh_nguyen/Documents/Sites/jobsite/www/src/JobsiteBundle/Controller/DefaultController.php">
+        <class name="DefaultController" namespace="JobsiteBundle\Controller">
+          <metrics methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="9" type="method" name="indexAction" crap="1" count="1"/>
+        <line num="11" type="stmt" count="1"/>
+        <metrics loc="13" ncloc="13" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+    </package>
+    <package name="JobsiteBundle\DependencyInjection">
+      <file name="/Users/vinh_nguyen/Documents/Sites/jobsite/www/src/JobsiteBundle/DependencyInjection/Configuration.php">
+        <class name="Configuration" namespace="JobsiteBundle\DependencyInjection">
+          <metrics methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="6" coveredelements="0"/>
+        </class>
+        <line num="18" type="method" name="getConfigTreeBuilder" crap="2" count="0"/>
+        <line num="19" type="stmt" count="0"/>
+        <line num="20" type="stmt" count="0"/>
+        <line num="21" type="stmt" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <line num="28" type="stmt" count="0"/>
+        <metrics loc="29" ncloc="15" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="6" coveredelements="0"/>
+      </file>
+      <file name="/Users/vinh_nguyen/Documents/Sites/jobsite/www/src/JobsiteBundle/DependencyInjection/JobsiteExtension.php">
+        <class name="JobsiteExtension" namespace="JobsiteBundle\DependencyInjection">
+          <metrics methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="0" elements="7" coveredelements="0"/>
+        </class>
+        <line num="20" type="method" name="load" crap="2" count="0"/>
+        <line num="21" type="stmt" count="0"/>
+        <line num="22" type="stmt" count="0"/>
+        <line num="23" type="stmt" count="0"/>
+        <line num="25" type="stmt" count="0"/>
+        <line num="26" type="stmt" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <metrics loc="28" ncloc="20" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="0" elements="7" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="JobsiteBundle">
+      <file name="/Users/vinh_nguyen/Documents/Sites/jobsite/www/src/JobsiteBundle/JobsiteBundle.php">
+        <class name="JobsiteBundle" namespace="JobsiteBundle">
+          <metrics methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="9" ncloc="9" classes="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+    </package>
+    <metrics files="4" loc="79" ncloc="57" classes="4" methods="3" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="1" elements="15" coveredelements="2"/>
+  </project>
+</coverage>
